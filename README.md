@@ -39,8 +39,8 @@ module.exports = {
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**[`files`](#files)**|`{String|Array(String)}`|`['styles.css', 'style.css', 'main.css']`| Enable/Disable `url()` handling|
-|**[`tryFilename`](#tryFilename)**|`{Boolean|String|Array(String)}`|`false`|Path to resolve URLs, URLs starting with `/` will not be translated|
+|**[`files`](#files)**|`{String|Array(String)}`|`['styles.css', 'style.css', 'main.css']`| Files which should be tried to load|
+|**[`tryFilename`](#tryFilename)**|`{Boolean|String|Array(String)}`|`false`|Should it try to load styles file based on requested file name|
 
 ### `files`
 List of files which loader should try to load from requested file path.

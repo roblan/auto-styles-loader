@@ -1,0 +1,27 @@
+{
+  "name": "auto-styles-loader",
+  "version": "1.0.0",
+  "description": "auto adding styles loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roblan/auto-styles-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "css",
+    "auto",
+    "scss",
+    "automatic",
+    "loader"
+  ],
+  "author": "Robert Lange",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roblan/auto-styles-loader/issues"
+  },
+  "homepage": "https://github.com/roblan/auto-styles-loader#readme"
+}

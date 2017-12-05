@@ -1,4 +1,5 @@
 const path = require('path');
+const os = require('os');
 const fs = require('fs');
 const loaderUtils = require('loader-utils');
 
@@ -24,10 +25,13 @@ module.exports = function(content) {
 	if (options.tryFilename) {
 		files = toArray(options.tryFilename).map(ext => resource.name + ext).concat(files);
 	}
-	const stylePath = files.map(file => path.join(resource.dir, file)).find(fs.existsSync);
+	let stylePath = files.map(file => path.join(resource.dir, file)).find(fs.existsSync);
 
 	if (stylePath) {
 		this.addDependency(stylePath);
+		if (os.platform().startsWith('win')) {
+			stylePath = stylePath.split(path.sep).join('/');
+		}
 		return `require('${stylePath}');\n${content}`;
 	}
 	return content;
